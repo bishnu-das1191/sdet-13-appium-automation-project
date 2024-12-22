@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+    <listeners>
+        <listener class-name="com.project.listeners.TestListener"/>
+    </listeners>
+    <test name="Medium_phone">
+        <!--        <listeners>-->
+        <!--            <listener class-name="com.project.listeners.TestListener"/>-->
+        <!--        </listeners>-->
+        <parameter name="emulator" value="true"/>
+        <parameter name="platformName" value="Android"/>
+        <parameter name="udid" value="emulator-5554"/>
+        <parameter name="deviceName" value="Medium_Phone_API_35"/>
+        <parameter name="systemPort" value="10000"/>
+        <parameter name="chromeDriverPort" value="11000"/>
+        <classes>
+            <class name="com.project.tests.LoginTests"/>
+            <class name="com.project.tests.ProductTests"/>
+        </classes>
+    </test>
+</suite>
